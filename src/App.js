@@ -36,7 +36,7 @@ function App() {
     // console.log("password: "+ password);
     // console.log("Active Tab:"+ activeTab);
     axios
-      .post("http://localhost:5000/api/users/register", {
+      .post("https://aqueous-coast-83605.herokuapp.com/api/users/register", {
         name: name,
         email: email,
         password: password,
@@ -60,7 +60,7 @@ function App() {
     // console.log("Active Tab:"+ activeTab);
     axios
       .post(
-        "http://localhost:5000/api/users/login",
+        "https://aqueous-coast-83605.herokuapp.com/api/users/login",
         {
           email: email,
           password: password
