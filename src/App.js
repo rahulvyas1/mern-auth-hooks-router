@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import request from "request";
 import {
   BrowserRouter as Router,
   Route,
@@ -22,12 +23,6 @@ function App() {
   function Login() {
     return <h2>Login</h2>;
   }
-  axios.defaults.headers = {
-
-        "Access-Control-Allow-Origin": "*",
-        'Content-Type': 'application/x-www-form-urlencoded' 
-
-}
 
   const handleSignUp = event => {
     event.preventDefault();
@@ -54,10 +49,8 @@ function App() {
 
   const handleSignIn = event => {
     event.preventDefault();
+    console.log("email: " + email);
 
-    // console.log("email: " + email);
-    // console.log("password: "+ password);
-    // console.log("Active Tab:"+ activeTab);
     axios
       .post(
         "https://aqueous-coast-83605.herokuapp.com/api/users/login",
